@@ -21,4 +21,10 @@ res.render('post', {title: post.title, post: post});
 
 })
 
+router.get('/posts', function(req, res, next) {
+  var posts = postsServices.getPosts();
+
+  res.render('index', { title: 'Blog', posts: posts } );
+});
+
 module.exports = router;

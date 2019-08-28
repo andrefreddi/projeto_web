@@ -25,6 +25,14 @@ var getPosts = function(){
             body: 'Este eh meu segundo post, assim sai meu flint ou o devigle'
         },
 
+        {
+            id: 4,
+            title: 'Sistema Altomatico de posts :3c',
+            image: '1759.png',
+            description: 'Novo sistema do blog',
+            body: 'Este eh meu segundo post, assim sai meu flint ou o devigle'
+        },
+
     ];
 
 
