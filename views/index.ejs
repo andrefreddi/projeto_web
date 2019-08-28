@@ -9,15 +9,22 @@
   <body>
     <%- include('navbar'); -%>
 
-    <div class="container">
-      <div class="row">
-          <% posts.forEach((post) =>{ %>
+<div class="container">
+<div class="row">
 
-          <%- include('post_card', {post: post}); -%>
-          
-          <% }); %>  
-      </div>
-    </div>
+<% posts.forEach((post) =>{ %>
+<%- include('post_cardd', {post: post}); -%>
+<% }); %>
+
+
+
+
+
+
+
+
+</div>
+</div>
 
   </body>
 </html>
