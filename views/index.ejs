@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <title><%= title %></title>
     
     <%- include('imports'); -%>
 
   </head>
-  <body>
+  <body class="index-pag">
     <%- include('navbar'); -%>
 
 <div class="container">
@@ -15,13 +15,6 @@
 <% posts.forEach((post) =>{ %>
 <%- include('post_cardd', {post: post}); -%>
 <% }); %>
-
-
-
-
-
-
-
 
 </div>
 </div>

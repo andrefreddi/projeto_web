@@ -11,27 +11,45 @@ var getPosts = function(){
 
         {
             id: 2,
-            title: 'Post 2',
-            image: 'post2.jpg',
-            description: 'Meu segundo post',
-            body: 'Meu segundo esta voltado aos bot'
+            title: 'JavaScript',
+            image: 'js.png',
+            description: 'Tudo sobre JavaScript para você!',
+            body: 'JavaScript, frequentemente abreviado como JS, é uma linguagem de programação interpretada de alto nível, caracterizada também, como dinâmica, fracamente tipificada, prototype-based e multi-paradigma.[2] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.'
         },
+
 
         {
             id: 3,
-            title: 'Sistema Altomatico de posts :3c',
-            image: '1759.png',
-            description: 'Novo sistema do blog',
-            body: 'Este eh meu segundo post, assim sai meu flint ou o devigle'
+            title: 'Inteligência artificial',
+            image: 'ia.png',
+            description: 'O tão proximo estamos da Inteligência artificial?',
+            body: 'Quanto tempo falta para os robôs se tornarem melhores atletas que os humanos? E para que os computadores descubram novas leis da matemática? E cheguem ao topo da Billboard com a sua própria cyberboyband? Um estudo calculou quão perto estamos da superação da inteligência artificial em tudo, até nas habilidades mais banais. A conta foi feita com base nas estimativas de cientistas de Oxford e Yale. A primeira superação à vista é a do jogo Angry Birds: em cerca de dois anos, você pode esperar que a inteligência artificial se torne imbatível, melhor do que qualquer jogador humano na categoria “atacar porcos verdes com pássaros raivosos”.'
         },
 
         {
             id: 4,
-            title: 'Sistema Altomatico de posts :3c',
-            image: '1759.png',
-            description: 'Novo sistema do blog',
-            body: 'Este eh meu segundo post, assim sai meu flint ou o devigle'
+            title: 'Aprender a programar em C#',
+            image: 'c.png',
+            description: 'Vamos aprender hoje como programar em C#',
+            body: '1 – Introdução ---- O C# (C-Sharp) é uma linguagem de programação orientada a objeto e fortemente tipada criada pela Microsoft e tendo como principal desenvolvedor Anders Hejlsberg (o mesmo criador do Delphi e Turbo Pascal) como parte do Framework .NET que se encontra na atualmente na versão 5.0. É uma linguagem influenciada pelo C++, Java e Object Pascal.2 ==– Sintaxe Um código em C# será armazenado sempre em um arquivo com extensão “.cs” como por exemplo FolhaDePagamento.cs ou ConexaoDados.cs. Dentro dos arquivos C#, poderemos ter várias ou nenhuma namespaces e dentro dessas uma ou mais classes. Vamos a alguns exemplos'
         },
+
+        {
+            id: 5,
+            title: 'Jogo da velha em C#',
+            image: 'jogodavelha.png',
+            description: 'Jogo da velha feito em C#',
+            body: 'Um trabalho de faculdade feito em C#, um jogo da velha'
+        },
+
+        {
+            id: 6,
+            title: 'Site estatico em HTML',
+            image: 'thepiratecatolica.jpg',
+            description: 'Site criado ultilizando o TML -The pirate Catolica-',
+            body: 'Site criado ultilizando o HTML, Css e Boostrap, dado o seu nome de -The pirate Catolica- teve seu intuito de ser um site para fornecer dowloads de jogos piratas'
+        },
+
 
     ];
 

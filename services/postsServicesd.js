@@ -11,18 +11,18 @@ var getPosts = function(){
 
         {
             id: 2,
-            title: 'Post 2',
-            image: 'post2.jpg',
-            description: 'Meu segundo post',
-            body: 'Meu segundo esta voltado aos bot'
+            title: 'JavaScript',
+            image: 'js.png',
+            description: 'Tudo sobre JavaScript para você!',
+            body: 'JavaScript, frequentemente abreviado como JS, é uma linguagem de programação interpretada de alto nível, caracterizada também, como dinâmica, fracamente tipificada, prototype-based e multi-paradigma.[2] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.'
         },
 
         {
             id: 3,
-            title: 'Sistema Altomatico de posts :3c',
-            image: '1759.png',
-            description: 'Novo sistema do blog',
-            body: 'Este eh meu segundo post, assim sai meu flint ou o devigle'
+            title: 'Inteligência artificial',
+            image: 'ia.png',
+            description: 'O tão proximo estamos da Inteligência artificial?',
+            body: 'Quanto tempo falta para os robôs se tornarem melhores atletas que os humanos? E para que os computadores descubram novas leis da matemática? E cheguem ao topo da Billboard com a sua própria cyberboyband? Um estudo calculou quão perto estamos da superação da inteligência artificial em tudo, até nas habilidades mais banais. A conta foi feita com base nas estimativas de cientistas de Oxford e Yale. A primeira superação à vista é a do jogo Angry Birds: em cerca de dois anos, você pode esperar que a inteligência artificial se torne imbatível, melhor do que qualquer jogador humano na categoria “atacar porcos verdes com pássaros raivosos”.'
         },
 
 

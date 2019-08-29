@@ -1,12 +1,49 @@
 .post-detail img {
-    width: 800px;
-    height: 160px;
+    width: 100%;
+    height: 40%;
 
 }
 
-.post-detail h1 {
+.post-detail{
 
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
-    color: purple;
+    padding: 4%;
+    color: rgb(212, 212, 212);      
+}
+.post-detail p{
+    margin-top: 30px;
+    background-color:  rgba(252, 252, 252, 0.082); 
+}
+
+.index-pag{
+background-color: rgb(0,50,100);
+}
+.index-pagg{
+background-color: rgb(0,50,100);  
+}
+.card-detail{
+background-color: rgb(0,50,100);  
+}
+
+.container {
+margin:  30px;
+background-color: rgb(0,50,100); 
+
+}
+
+.card img{
+width: 286px;
+height: 170px;
+
+}
+
+.card{
+margin: 4%;
+background-color: black;
+color: white;
+}
+
+.post-body body{
+    background-color: rgb(0,50,100);   
 }
