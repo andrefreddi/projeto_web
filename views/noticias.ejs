@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html">
+  <head>
+    <title><%= title %></title>
+    
+    <%- include('imports'); -%>
+
+  </head>
+  <body class="index-pag">
+    <%- include('navbar'); -%>
+
+<div class="container">
+<div class="row">
+
+<% noticias.forEach((noticia) =>{ %>
+<%- include('noticias_card', {noticia: noticia}); -%>
+<% }); %>
+
+</div>
+</div>
+
+  </body>
+</html>

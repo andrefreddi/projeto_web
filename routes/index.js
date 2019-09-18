@@ -3,6 +3,7 @@ var router = express.Router();
 var postsServices = require('../services/postsServices');
 var postsServicesd = require('../services/postsServicesd');
 var projectServices = require('../services/projectServices');
+var noticiasServices = require('../services/noticiasServices');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -45,6 +46,13 @@ router.get('/posts', function(req, res, next) {
   var posts = postsServices.getPosts();
 
   res.render('allposts', { title: 'Todas as Postagens', posts: posts } );
+});
+
+
+router.get('/noticias', function(req, res, next) {
+  var noticias = noticiasServices.getNoticias();
+
+  res.render('noticias', { title: 'Noticias', noticias: noticias } );
 });
 
 module.exports = router;
