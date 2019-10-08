@@ -4,6 +4,7 @@ var postsServices = require('../services/postsServices');
 var postsServicesd = require('../services/postsServicesd');
 var projectServices = require('../services/projectServices');
 var noticiasServices = require('../services/noticiasServices');
+var mixmasterService = require('../services/mixmasterService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -53,6 +54,12 @@ router.get('/noticias', function(req, res, next) {
   var noticias = noticiasServices.getNoticias();
 
   res.render('noticias', { title: 'Noticias', noticias: noticias } );
+});
+
+router.get('/mixmaster', function(req, res, next) {
+  var mixmaster = mixmasterService.getMixmaster();
+
+  res.render('mixmaster', { title: 'Mix Master War', mixmaster: mixmaster } );
 });
 
 module.exports = router;

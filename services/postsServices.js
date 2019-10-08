@@ -1,62 +1,31 @@
+var fs = require('fs');
 
-var getPosts = function(){
-    var posts = [
-        {
-            id: 1,
-            title: 'Bootstrap',
-            image: 'bootstrap.png',
-            description: 'Tudo sobre Bootstrap para você!',
-            body: 'Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo. O Bootstrap é um dos projetos mais bem avaliado no site GitHub, com mais de 111 600 estrelas e 51 500 forks.[1] Possui ampla documentaçao na pagina oficial: https://getbootstrap.com/, assim como diversos tutoriais e materiais em português.'
-        },
+var postsFilePath = 'db/posts.json';
 
-        {
-            id: 2,
-            title: 'JavaScript',
-            image: 'js.png',
-            description: 'Tudo sobre JavaScript para você!',
-            body: 'JavaScript, frequentemente abreviado como JS, é uma linguagem de programação interpretada de alto nível, caracterizada também, como dinâmica, fracamente tipificada, prototype-based e multi-paradigma.[2] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.'
-        },
+var loadFilePosts = function() {
+  var fileData = fs.readFileSync(postsFilePath, 'utf8');
+  var posts = JSON.parse(fileData);
 
+  return posts;
+}
 
-        {
-            id: 3,
-            title: 'Inteligência artificial',
-            image: 'ia.png',
-            description: 'O tão proximo estamos da Inteligência artificial?',
-            body: 'Quanto tempo falta para os robôs se tornarem melhores atletas que os humanos? E para que os computadores descubram novas leis da matemática? E cheguem ao topo da Billboard com a sua própria cyberboyband? Um estudo calculou quão perto estamos da superação da inteligência artificial em tudo, até nas habilidades mais banais. A conta foi feita com base nas estimativas de cientistas de Oxford e Yale. A primeira superação à vista é a do jogo Angry Birds: em cerca de dois anos, você pode esperar que a inteligência artificial se torne imbatível, melhor do que qualquer jogador humano na categoria “atacar porcos verdes com pássaros raivosos”.'
-        },
+var saveFilePosts = function(posts) {
+  var data = JSON.stringify(posts);
+  fs.writeFileSync(postsFilePath, data, 'utf8');
+}
 
-        {
-            id: 4,
-            title: 'Aprender a programar em C#',
-            image: 'c.png',
-            description: 'Vamos aprender hoje como programar em C#',
-            body: '1 – Introdução ---- O C# (C-Sharp) é uma linguagem de programação orientada a objeto e fortemente tipada criada pela Microsoft e tendo como principal desenvolvedor Anders Hejlsberg (o mesmo criador do Delphi e Turbo Pascal) como parte do Framework .NET que se encontra na atualmente na versão 5.0. É uma linguagem influenciada pelo C++, Java e Object Pascal.2 ==– Sintaxe Um código em C# será armazenado sempre em um arquivo com extensão “.cs” como por exemplo FolhaDePagamento.cs ou ConexaoDados.cs. Dentro dos arquivos C#, poderemos ter várias ou nenhuma namespaces e dentro dessas uma ou mais classes. Vamos a alguns exemplos'
-        },
+var getPosts = function() {
+  var posts = loadFilePosts();
+  return posts;
+}
 
-        {
-            id: 5,
-            title: 'Jogo da velha em C#',
-            image: 'jogodavelha.png',
-            description: 'Jogo da velha feito em C#',
-            body: 'Um trabalho de faculdade feito em C#, um jogo da velha'
-        },
-
-        {
-            id: 6,
-            title: 'Site estatico em HTML',
-            image: 'thepiratecatolica.jpg',
-            description: 'Site criado ultilizando o TML -The pirate Catolica-',
-            body: 'Site criado ultilizando o HTML, Css e Boostrap, dado o seu nome de -The pirate Catolica- teve seu intuito de ser um site para fornecer dowloads de jogos piratas'
-        },
-
-
-    ];
-
-
-    return posts;    
+var savePost = function(newPost) {
+  var posts = loadFilePosts();
+  posts.push(newPost);
+  saveFilePosts(posts);
 }
 
 module.exports = {
-    getPosts: getPosts
+  getPosts: getPosts,
+  savePost: savePost
 }

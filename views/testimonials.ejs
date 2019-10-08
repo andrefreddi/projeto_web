@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+  <body class="azul">
+    <%- include('navbar'); -%>
+    <div class="container">
+      <% testimonials.forEach((item) => { %>
+        <div class="testimony">
+          <h2 class="testimonial-description">
+            "<%= item.testimony %>"
+          </h2>
+          <br>
+
+          <h3>
+          <p class="testimonial-info">
+            <%= item.name %> (<%= item.title %>) - <%= item.company %>
+          </p>
+          </h3>
+        </div>
+      <% }); %>
+    </div>
+
+  </body>
+</html>
