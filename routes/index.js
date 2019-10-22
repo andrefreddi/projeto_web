@@ -13,6 +13,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Blog', posts: posts } );
 });
 
+//===========POSTS============================================================
+
 router.get('/posts/:postId', function(req, res, next){
 
 var postId = req.params.postId;
@@ -24,6 +26,17 @@ var post = posts.filter((post) => post.id == postId) [0];
 res.render('post', {title: post.title, post: post});
 
 });
+
+router.get('/posts', function(req, res, next) {
+  var posts = postsServices.getPosts();
+
+  res.render('allposts', { title: 'Todas as Postagens', posts: posts } );
+});
+
+//==========================================================================
+
+
+//===========PROJETOS=======================================================
 
 router.get('/project/:projectId', function(req, res, next){
 
@@ -43,12 +56,10 @@ router.get('/project', function(req, res, next) {
   res.render('project', { title: 'Todos os Projetos', projects: projects } );
 });
 
-router.get('/posts', function(req, res, next) {
-  var posts = postsServices.getPosts();
+//==========================================================================
 
-  res.render('allposts', { title: 'Todas as Postagens', posts: posts } );
-});
 
+//===========NOTICIAS=======================================================
 
 router.get('/noticias', function(req, res, next) {
   var noticias = noticiasServices.getNoticias();
@@ -56,10 +67,18 @@ router.get('/noticias', function(req, res, next) {
   res.render('noticias', { title: 'Noticias', noticias: noticias } );
 });
 
+//==========================================================================
+
+
+
+//==========================================================================
+
 router.get('/mixmaster', function(req, res, next) {
   var mixmaster = mixmasterService.getMixmaster();
 
   res.render('mixmaster', { title: 'Mix Master War', mixmaster: mixmaster } );
 });
+
+//==========================================================================
 
 module.exports = router;

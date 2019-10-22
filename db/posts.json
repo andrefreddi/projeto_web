@@ -43,23 +43,9 @@
     },
     {
         "id": 7,
-        "title": "a",
-        "image": "a",
-        "description": "a",
-        "body": "a"
-    },
-    {
-        "id": 8,
-        "title": "The solus",
-        "image": "thesolus.png",
-        "description": "um grande game",
-        "body": "GRANDE GAME"
-    },
-    {
-        "id": 9,
-        "title": "js",
-        "image": "a",
-        "description": "botão lindinho",
-        "body": "vo chora"
+        "title": "Rei",
+        "image": "image-1571775548358.jpg",
+        "description": "Apenas a Rei",
+        "body": "Rei de neon genesis evangelion"
     }
 ]
