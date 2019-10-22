@@ -1,28 +1,31 @@
+var fs = require('fs');
 
-var getProjects = function(){
-var projects = [
-        {
-            id: 5,
-            title: 'Jogo da velha em C#',
-            image: 'jogodavelha.png',
-            description: 'Jogo da velha feito em C#',
-            body: 'Um trabalho de faculdade feito em C#, um jogo da velha'
-        },
+var projectsFilePath = 'db/project.json';
 
-        {
-            id: 6,
-            title: 'Site estatico em HTML',
-            image: 'thepiratecatolica.jpg',
-            description: 'Site criado ultilizando o TML -The pirate Catolica-',
-            body: 'Site criado ultilizando o HTML, Css e Boostrap, dado o seu nome de -The pirate Catolica- teve seu intuito de ser um site para fornecer dowloads de jogos piratas'
-        },
+var loadFileProjects = function() {
+  var fileData = fs.readFileSync(projectsFilePath, 'utf8');
+  var projects = JSON.parse(fileData);
 
-    ];
+  return projects;
+}
 
+var saveFileProjects = function(projects) {
+  var data = JSON.stringify(projects);
+  fs.writeFileSync(projectsFilePath, data, 'utf8');
+}
 
-    return projects;    
+var getProjects = function() {
+  var projects = loadFileProjects();
+  return projects;
+}
+
+var saveProjects = function(newProjects) {
+  var projects = loadFileProjects();
+  projects.push(newProjects);
+  saveFileProjects(projects);
 }
 
 module.exports = {
-    getProjects: getProjects
+    getProjects: getProjects,
+    saveProjects: saveProjects
 }
