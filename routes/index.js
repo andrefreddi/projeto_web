@@ -13,6 +13,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Blog', posts: posts } );
 });
 
+
+
+
 //===========POSTS============================================================
 
 router.get('/posts/:postId', function(req, res, next){

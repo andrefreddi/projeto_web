@@ -1,24 +1,31 @@
+var fs = require('fs');
+
+var testimonialsFilePath = 'db/testimonials.json';
+
+var loadFileTestimonials = function() {
+  var fileData = fs.readFileSync(testimonialsFilePath, 'utf8');
+  var testimonials = JSON.parse(fileData);
+
+  return testimonials;
+}
+
+var saveFileTestimonials = function(posts) {
+  var data = JSON.stringify(posts);
+  fs.writeFileSync(testimonialsFilePath, data, 'utf8');
+}
+
 var getTestimonials = function() {
-    var testimonials = [
-      {
-        id: 1,
-        name: 'Fulano de tal',
-        company: 'Catolica SC',
-        title: 'Cara da TI',
-        testimony: 'Eu gosto muito de javascript'
-      },
-      {
-        id: 2,
-        name: 'Joaozinho',
-        company: 'Catolica SC',
-        title: 'Cara da Secretaria',
-        testimony: 'Eu tb gosto muito de javascript'
-      }
-    ];
-  
-    return testimonials;
-  }
-  
-  module.exports = {
-    getTestimonials: getTestimonials
-  }
+  var testimonials = loadFileTestimonials();
+  return testimonials;
+}
+
+var saveTestimonials = function(newPost) {
+  var testimonials = loadFileTestimonials();
+  testimonials.push(newTestimonials);
+  saveFileTestimonials(testimonials);
+}
+
+module.exports = {
+  getTestimonials: getTestimonials,
+  saveTestimonials: saveTestimonials
+}

@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminPostsRouter = require('./routes/admin/posts');
 var adminProjectsRouter = require('./routes/admin/project');
+var adminTestimonialsRouter = require('./routes/admin/testimonials');
 var testimonialsRouter = require('./routes/testimonials');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/admin/posts', adminPostsRouter);
 app.use('/admin/project', adminProjectsRouter);
+app.use('/admin/testimonials', adminTestimonialsRouter);
 app.use('/users', usersRouter);
 app.use('/testimonials', testimonialsRouter);
 
