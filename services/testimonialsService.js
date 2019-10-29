@@ -9,8 +9,8 @@ var loadFileTestimonials = function() {
   return testimonials;
 }
 
-var saveFileTestimonials = function(posts) {
-  var data = JSON.stringify(posts);
+var saveFileTestimonials = function(testimonials) {
+  var data = JSON.stringify(testimonials);
   fs.writeFileSync(testimonialsFilePath, data, 'utf8');
 }
 
@@ -19,7 +19,7 @@ var getTestimonials = function() {
   return testimonials;
 }
 
-var saveTestimonials = function(newPost) {
+var saveTestimonials = function(newTestimonials) {
   var testimonials = loadFileTestimonials();
   testimonials.push(newTestimonials);
   saveFileTestimonials(testimonials);

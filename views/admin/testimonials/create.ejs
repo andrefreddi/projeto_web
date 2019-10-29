@@ -2,7 +2,7 @@
 <html lang="en">
 <head class="azul">
   <meta charset="UTF-8">
-  <title>Posts</title>
+  <title>testimonials</title>
   <%- include('../../imports'); -%>
 </head>
 <body class="azul">
@@ -15,20 +15,36 @@
     </div>
     <div class="row">
       <div class="col-md-12">
+
           <form action="create" method="TEST" enctype="multipart/form-data">
+
+
               <div class="form-group">
-                <label for="postTitle">Título</label>
-                <input name="title" type="text" class="form-control" id="postTitle" placeholder="Título do post">
+                <label for="testimonialsname">Nome</label>
+                <input name="name" type="text" class="form-control" id="testimonialsname" placeholder="Nome da pessoa">
               </div>
+
+
               <div class="form-group">
-                <label for="postImage">Imagem</label>
-                <input type="file" name="image" class="form-control" />
+                <label for="testimonialscompany">companhia</label>
+                <input type="text" name="company" class="form-control" />
               </div>
+
+
               <div class="form-group">
-                <label for="postDescription">Descrição</label>
-                <textarea name="description" type="text" class="form-control" id="postDescription" placeholder=""></textarea>
+                <label for="testimonialstitle">Titlo ( O que voce faz )</label>
+                <textarea name="title" type="text" class="form-control" id="testimonialstitle" placeholder=""></textarea>
               </div>
+
+              <div class="form-group">
+                  <label for="testimonialstestimony">Testemunha</label>
+                  <textarea name="testimony" type="text" class="form-control" id="testimonialstestimony" placeholder=""></textarea>
+              </div>
+
+
               <button type="submit" class="btn btn-primary">Salvar</button>
+
+
             </form>
       </div>
         
